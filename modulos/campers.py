@@ -16,9 +16,6 @@ def create():
     })  
     os.system("Pause")
 
-def prueba():
-    pass
-
 def Campers(codigo= None):
     os.system("cls")
     print("""
@@ -109,11 +106,21 @@ def ModificarCampers():
                 os.system("cls")
                 break
         
-def delete():
-    pass
+def prueba():
+        os.system("cls")
+        print("""
+        **********************
+        *  Pruebas camper    *
+        **********************
+        """)
+        Campers()
+        codigo = int(input("Ingrese codigo del camper a quien quiere añadir nota: "))
+        Campers(codigo)
+        while(True):
+            pass
 
 def MenuCampers():
-    menu = ["Registrar camper","Registro de Prueba","Ver Campers","Modificar Campers","Salir"]
+    menu = ["Registrar camper","Ver Campers","Modificar Campersa","Registro de prueba","Regresar al menu"]
     while(True):
         os.system("cls")
         print("""
@@ -127,9 +134,9 @@ def MenuCampers():
             if(opc <= len(menu) and opc >0):
                 match(opc):
                     case 1: create()
-                    case 2: ()
-                    case 3: Campers()
-                    case 4: ModificarCampers()
+                    case 2: Campers()
+                    case 3: ModificarCampers()
+                    case 4: prueba()
                     case 5: menuPrincipal()
         except ValueError:
             print(f"La opcion {opc} no es valida")
