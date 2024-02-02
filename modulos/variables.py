@@ -3,5 +3,5 @@ camper = list()
 def save(data):
     camper.append(data)
 
-def getAll():
+def campers():
     return camper   
